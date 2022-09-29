@@ -116,6 +116,9 @@ describe("About Arrays", function () {
   let citrus2 = fruits.slice(3)
   console.log(citrus1) // ['Orange', 'Lemon']
   console.log(citrus2) // ['Apple', 'Mango'] */
+
+  /* slice() 대 splice(): ---------- 
+  1.형태: array.slice(), array.splice() */
   it("should slice arrays", function () {
     var array = ["peanut", "butter", "and", "jelly"];
 
@@ -148,9 +151,10 @@ describe("About Arrays", function () {
 
   /* array.push() 메서드: ----------
   (https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-  1. 형태: arr.push()
+  1. 형태: array.push()
   -해당 배열의 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 반환한다. 
   -push() 메서드 결과, 기존 배열은 추가된 요소를 포함해서 반환한다.
+  (=push() 메서드는 원래의 배열에 영행을 준다.)
   2-1. 예시
   let sampleArr = ['가', '나', '다', '라'];
   let plus = sampleArr.push('마');
@@ -164,9 +168,10 @@ describe("About Arrays", function () {
 
   /* array.pop() 메서드: ----------
   (https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
-  1. 형태: arr.pop()
+  1. 형태: array.pop()
   -해당 배열의 '마지막' 요소를 제거하고, '제거된 요소'를 반환한다.
   -pop() 메서드 결과, 기존 배열은 제거된 요소를 뺴고 반환한다(제거된 요소는 더 이상 기존 배열에 없다).
+  (=pop() 메서드는 원래의 배열에 영행을 준다.)
   -pop()의, ()안에 요소를 넣을 필요 없다.
   2. 예시
   let sampleArr = ['가', '나', '다', '라'];
@@ -189,6 +194,7 @@ describe("About Arrays", function () {
   1. 형태: array.unshift()
   -해당 배열의 맨 앞에 새로운 요소를 추가하고, 배열의 새로운 길이를 반환한다. 
   -unshift() 메서드 결과, 기존 배열은 추가된 요소를 포함해서 반환한다.
+  (=unshift() 메서드는 원래의 배열에 영행을 준다.)
   -unshift()의, ()안에 요소를 넣을 필요 없다.
   2-1. 예시
   let sampleArr = ['나', '다', '라', '마'];
@@ -204,7 +210,8 @@ describe("About Arrays", function () {
   (https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
   1. 형태: array.shift()
   -해당 배열의 첫 번째 요소를 제거하고, '제거된 요소'를 반환한다.
-  -shift() 메서드 결과, 기존 배열은 제거된 요소를 뺴고 반환한다(제거된 요소는 더 이상 기존 배열에 없다). 
+  -shift() 메서드 결과, 기존 배열은 제거된 요소를 뺴고 반환한다(제거된 요소는 더 이상 기존 배열에 없다).
+  (=shift() 메서드는 원래의 배열에 영행을 준다.) 
   2. 예시
   let sampleArr = ['가', '나', '다', '라'];
   let shifted  = sampleArr.shift();
