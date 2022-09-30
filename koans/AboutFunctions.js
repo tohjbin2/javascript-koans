@@ -71,16 +71,24 @@ describe("About Functions", function () {
 
     /* array.join() 메서드: ---------- 
     (https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
-    1. 형태: array.join(separator) 
+    1-1. 형태: array.join(separator) 
     -배열의 모든 요소를 연결해 하나의 문자열로 반환한다.
     -separator: 배열의 각 요소를 구분할 문자열을 지정한다.
     separator를 생략하면 배열의 각 요소 사이는 쉼표(,)로 구분된다.
     separator에 빈 문자열을 넣을 경우, 배열의 각 요소 사이에는 아무 문자열 없이 붙어서 연결된다. 
-    2. 예시
+    1-2. 예시
     const elements = ['Fire', 'Air', 'Water'];
     console.log(elements.join()); // Fire,Air,Water
     console.log(elements.join('')); // FireAirWater
-    console.log(elements.join('-')); // Fire-Air-Water */
+    console.log(elements.join('-')); // Fire-Air-Water 
+    2-1. separator 뒤에 '+ string'이 붙는 경우 / 예시: array.join("&" + "얍")
+    예시처럼 separator뒤에 스트링이 붙더라도 당황할 필요 없다. 
+    지정한 separator(예시의 경우: &)와 추가로 붙인 문자열(예시의 경우: 얍)이, 둘이 묶여 함께 배열 사이에 올 뿐이다.
+    2-2. 예시
+    console.log(Array(5)) // [undefined, undefined, undefined, undefined, undefined]
+    console.log(Array(5).join(" ")) // "    " ->undefined는 값이 없기 때문에, 결과로 separator로 넣은 빈 스트링만 보이는 게 맞다. 하지만 이해를 위해 undefined 위치를 ()로 표시하면 다음과 같다. "() () () () ()"
+    console.log(Array(5).join("a")) // "aaaa"
+    console.log(Array("사과", "배", "복숭아", "포도", "딸기").join(" " + "a")) // "사과 a배 a복숭아 a포도 a딸기" */
     function returnAllArgs() {
       var argsArray = [];
       for (var i = 0; i < arguments.length; i += 1) {
